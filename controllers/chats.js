@@ -5,7 +5,7 @@ function getChats(req, res, next) {
   const userID = req.user;
 
   Chat.find({ members: { $in: [userID] } })
-    .populate(['members'])
+    .populate(["members"])
     .then((chats) => res.status(200).send([...chats]))
     .catch(next);
 }
@@ -14,20 +14,17 @@ function createChat(req, res, next) {
   const { email } = req.body;
   const owner = req.user;
 
-  User.findOne({ email })
-    .then(({ _id: userID }) => {
-      Chat.create({ members: [owner, userID] })
-        .then((chat) => res.status(200).send(chat))
-        .catch((e) => {
-          if (e.name === "ValidationError") {
-            const err = new Error("Данные невалидны");
-            err.statusCode = 400;
-            next(err);
-          } else next(e);
-        });
-    })
-
-
+  User.findOne({ email }).then(({ _id: userID }) => {
+    Chat.create({ members: [owner, userID] })
+      .then((chat) => res.status(200).send(chat))
+      .catch((e) => {
+        if (e.name === "ValidationError") {
+          const err = new Error("Данные невалидны");
+          err.statusCode = 400;
+          next(err);
+        } else next(e);
+      });
+  });
 }
 
 function deleteChat(req, res, next) {
