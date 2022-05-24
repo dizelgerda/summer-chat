@@ -17,7 +17,6 @@ function createMessage(req, res, next) {
   Message.create({ text, chat, owner })
     .then((message) => res.status(200).send(message))
     .catch((e) => {
-      // console.log(e)
       if (e.name === 'ValidationError') {
         const err = new Error('Данные невалидны');
         err.statusCode = 400;
