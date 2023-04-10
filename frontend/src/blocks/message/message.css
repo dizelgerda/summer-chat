@@ -1,0 +1,28 @@
+.message {
+  width: max-content;
+  max-width: 60%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.message_is-mine {
+  background-color: #0066cc;
+  color: white;
+  align-self: flex-end;
+}
+
+.message__text {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.message__date {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 400;
+}

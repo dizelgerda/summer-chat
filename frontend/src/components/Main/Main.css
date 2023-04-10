@@ -1,0 +1,20 @@
+
+
+.main {
+  width: 80%;
+  max-width: 800px;
+  height: 80vh;
+
+  display: grid;
+  grid-template-columns: 30% 70%;
+
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.main__no-chats {
+  align-self: center;
+  margin: auto;
+}

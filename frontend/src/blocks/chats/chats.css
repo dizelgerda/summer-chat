@@ -1,0 +1,54 @@
+.chats {
+  padding: 10px;
+  border-right: 1px solid lightgrey;
+  overflow-y: auto;
+}
+
+.chats__item {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
+}
+
+.chats__item:last-child {
+  border-bottom: none;
+}
+
+.chats__name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.chats__email {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.chats__menu {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px
+}
+
+.chats__menu-button {
+  padding: 5px 10px;
+  background: none;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chats__name_selected {
+  font-weight: 900;
+  color: 	#0066cc;
+}

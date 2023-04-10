@@ -1,0 +1,13 @@
+@import url(../../vendor/normalize.css);
+
+.root {
+  font-family: "Roboto", sans-serif;
+
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(15deg, #ffcc00 50%, #0066cc 50%);
+  animation: 1s test ease;
+}
